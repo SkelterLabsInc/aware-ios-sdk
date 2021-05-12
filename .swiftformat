@@ -1,0 +1,13 @@
+# https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
+
+--indent 2
+--tabwidth 2
+--maxwidth 100
+--indentcase true
+--ifdef outdent
+--ranges no-space
+--wraparguments before-first
+--wrapcollections before-first
+
+# opt-outs
+--disable andOperator
