@@ -40,3 +40,6 @@ Carthage/Build
 
 # CocoaPods
 Pods
+
+# Generated Mock
+Tests/GeneratedMocks.swift

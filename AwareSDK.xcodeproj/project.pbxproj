@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00EDF5264D298B00CC3541 /* AwareSDK.swift */; };
+		0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
+		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
+		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
+		0BF09DDB2653A7D200C25048 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF09DDA2653A7D200C25048 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,10 +26,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B00EDF5264D298B00CC3541 /* AwareSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareSDK.swift; sourceTree = "<group>"; };
+		0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareSDKTest.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D5326450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B951B602657786B00E7242E /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		0BF09DDA2653A7D200C25048 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B951B64265778F900E7242E /* Cuckoo in Frameworks */,
 				0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +93,9 @@
 		0B8F4D4526450FF9001D2BC1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0B951B5F2657768F00E7242E /* Protocols */,
 				0B44FCE12645574200DF7ED1 /* Supporting Files */,
+				0B00EDF5264D298B00CC3541 /* AwareSDK.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -92,8 +104,18 @@
 			isa = PBXGroup;
 			children = (
 				0B44FCE2264557AF00DF7ED1 /* Supporting Files */,
+				0B951B602657786B00E7242E /* GeneratedMocks.swift */,
+				0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		0B951B5F2657768F00E7242E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0BF09DDA2653A7D200C25048 /* Device.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +146,8 @@
 			dependencies = (
 			);
 			name = AwareSDK;
+			packageProductDependencies = (
+			);
 			productName = AwareSDK;
 			productReference = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */;
 			productType = "com.apple.product-type.framework";
@@ -132,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B8F4D5A26450FF9001D2BC1 /* Build configuration list for PBXNativeTarget "AwareSDKTests" */;
 			buildPhases = (
+				0B951B5B2657707A00E7242E /* Run Script */,
 				0B8F4D4826450FF9001D2BC1 /* Sources */,
 				0B8F4D4926450FF9001D2BC1 /* Frameworks */,
 				0B8F4D4A26450FF9001D2BC1 /* Resources */,
@@ -142,6 +167,9 @@
 				0B8F4D4F26450FF9001D2BC1 /* PBXTargetDependency */,
 			);
 			name = AwareSDKTests;
+			packageProductDependencies = (
+				0B951B63265778F900E7242E /* Cuckoo */,
+			);
 			productName = AwareSDKTests;
 			productReference = 0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -153,7 +181,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0B8F4D4226450FF9001D2BC1 = {
 						CreatedOnToolsVersion = 12.4;
@@ -161,6 +189,7 @@
 					};
 					0B8F4D4B26450FF9001D2BC1 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -173,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 0B8F4D3926450FF9001D2BC1;
+			packageReferences = (
+				0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */,
+			);
 			productRefGroup = 0B8F4D4426450FF9001D2BC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +233,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B951B5B2657707A00E7242E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"${PROJECT_DIR}/Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Sources\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/TestTools/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Protocols/Device.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
 		0BDBFE5B264551C000F6D436 /* Swift Format script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF09DDB2653A7D200C25048 /* Device.swift in Sources */,
+				0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
+				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +435,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +462,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,6 +479,8 @@
 		0B8F4D5B26450FF9001D2BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,6 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skelterlabs.AwareSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,6 +499,8 @@
 		0B8F4D5C26450FF9001D2BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,6 +546,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B951B63265778F900E7242E /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B8F4D3A26450FF9001D2BC1 /* Project object */;
 }
