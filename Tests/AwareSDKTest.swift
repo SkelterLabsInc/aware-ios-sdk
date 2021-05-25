@@ -6,6 +6,7 @@ import XCTest
 class AwareSDKTest: XCTestCase {
   let PROJECT_ID = "test-project-id"
   let IDENTIFIER = UUID()
+  let USER_ID = "test-user-id"
 
   var device: MockDevice!
   var uut: AwareSDK!
@@ -16,7 +17,8 @@ class AwareSDKTest: XCTestCase {
     uut = AwareSDK(currentDevice: device)
   }
 
-  func test_whenIdentifierForVendorReturnsUuid_thenSetProjectIdWithGivenProjectIdAndIidWithTheUuid() {
+  func test_whenIdentifierForVendorReturnsUuid_thenSetProjectIdWithGivenProjectIdAndIidWithTheUuid(
+  ) {
     stub(device) { stub in
       when(stub.identifierForVendor.get).thenReturn(IDENTIFIER)
     }
@@ -25,5 +27,11 @@ class AwareSDKTest: XCTestCase {
 
     XCTAssertEqual(uut.projectId, PROJECT_ID)
     XCTAssertEqual(uut.iid, IDENTIFIER.uuidString)
+  }
+
+  func test_whenSettingUserId_thenSDKUserIdIsSetByTheUserId() {
+    uut.setUserId(userId: USER_ID)
+
+    XCTAssertEqual(uut.userId, USER_ID)
   }
 }
