@@ -9,9 +9,19 @@
 /* Begin PBXBuildFile section */
 		0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00EDF5264D298B00CC3541 /* AwareSDK.swift */; };
 		0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */; };
+		0B0DBEB4266641C200C0BA01 /* ClientSendEventParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DBEB3266641C200C0BA01 /* ClientSendEventParams.swift */; };
+		0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DBEB7266641EF00C0BA01 /* ClientSendEventParamsTest.swift */; };
+		0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C715266095D10086C1D4 /* AwareClientTest.swift */; };
+		0B79C71C2660B2D40086C1D4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0B79C71B2660B2D40086C1D4 /* Alamofire */; };
+		0B79C71E2660B2D80086C1D4 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 0B79C71D2660B2D80086C1D4 /* Mocker */; };
+		0B79C7222660D1DE0086C1D4 /* Date+timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C7202660D15C0086C1D4 /* Date+timestamp.swift */; };
+		0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C711266093EB0086C1D4 /* AwareClient.swift */; };
+		0B79C7272660F18E0086C1D4 /* AwareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C7262660F18E0086C1D4 /* AwareError.swift */; };
+		0B862B042666097A005E242D /* AwareError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B862B032666097A005E242D /* AwareError+Equatable.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
+		0BCE0E21265F9AD2005DB0EC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0BCE0E20265F9AD2005DB0EC /* Alamofire */; };
 		0BF09DDB2653A7D200C25048 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF09DDA2653A7D200C25048 /* Device.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +38,13 @@
 /* Begin PBXFileReference section */
 		0B00EDF5264D298B00CC3541 /* AwareSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareSDK.swift; sourceTree = "<group>"; };
 		0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareSDKTest.swift; sourceTree = "<group>"; };
+		0B0DBEB3266641C200C0BA01 /* ClientSendEventParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSendEventParams.swift; sourceTree = "<group>"; };
+		0B0DBEB7266641EF00C0BA01 /* ClientSendEventParamsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSendEventParamsTest.swift; sourceTree = "<group>"; };
+		0B79C711266093EB0086C1D4 /* AwareClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareClient.swift; sourceTree = "<group>"; };
+		0B79C715266095D10086C1D4 /* AwareClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareClientTest.swift; sourceTree = "<group>"; };
+		0B79C7202660D15C0086C1D4 /* Date+timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+timestamp.swift"; sourceTree = "<group>"; };
+		0B79C7262660F18E0086C1D4 /* AwareError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareError.swift; sourceTree = "<group>"; };
+		0B862B032666097A005E242D /* AwareError+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AwareError+Equatable.swift"; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCE0E21265F9AD2005DB0EC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,14 +66,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B79C71C2660B2D40086C1D4 /* Alamofire in Frameworks */,
 				0B951B64265778F900E7242E /* Cuckoo in Frameworks */,
 				0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */,
+				0B79C71E2660B2D80086C1D4 /* Mocker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0DBEB2266641AD00C0BA01 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				0B0DBEB3266641C200C0BA01 /* ClientSendEventParams.swift */,
+				0B79C711266093EB0086C1D4 /* AwareClient.swift */,
+				0B79C7262660F18E0086C1D4 /* AwareError.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		0B44FCE12645574200DF7ED1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +102,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0B79C71A2660B2D40086C1D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B79C71F2660D1390086C1D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C7202660D15C0086C1D4 /* Date+timestamp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B862B0226660878005E242D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B862B032666097A005E242D /* AwareError+Equatable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		0B8F4D3926450FF9001D2BC1 = {
 			isa = PBXGroup;
 			children = (
 				0B8F4D4526450FF9001D2BC1 /* Sources */,
 				0B8F4D5026450FF9001D2BC1 /* Tests */,
 				0B8F4D4426450FF9001D2BC1 /* Products */,
+				0B79C71A2660B2D40086C1D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +147,8 @@
 		0B8F4D4526450FF9001D2BC1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0B0DBEB2266641AD00C0BA01 /* Client */,
+				0B79C71F2660D1390086C1D4 /* Extensions */,
 				0B951B5F2657768F00E7242E /* Protocols */,
 				0B44FCE12645574200DF7ED1 /* Supporting Files */,
 				0B00EDF5264D298B00CC3541 /* AwareSDK.swift */,
@@ -103,9 +159,12 @@
 		0B8F4D5026450FF9001D2BC1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0B862B0226660878005E242D /* Helpers */,
 				0B44FCE2264557AF00DF7ED1 /* Supporting Files */,
 				0B951B602657786B00E7242E /* GeneratedMocks.swift */,
 				0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */,
+				0B79C715266095D10086C1D4 /* AwareClientTest.swift */,
+				0B0DBEB7266641EF00C0BA01 /* ClientSendEventParamsTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -147,6 +206,7 @@
 			);
 			name = AwareSDK;
 			packageProductDependencies = (
+				0BCE0E20265F9AD2005DB0EC /* Alamofire */,
 			);
 			productName = AwareSDK;
 			productReference = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */;
@@ -169,6 +229,8 @@
 			name = AwareSDKTests;
 			packageProductDependencies = (
 				0B951B63265778F900E7242E /* Cuckoo */,
+				0B79C71B2660B2D40086C1D4 /* Alamofire */,
+				0B79C71D2660B2D80086C1D4 /* Mocker */,
 			);
 			productName = AwareSDKTests;
 			productReference = 0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */;
@@ -204,6 +266,8 @@
 			mainGroup = 0B8F4D3926450FF9001D2BC1;
 			packageReferences = (
 				0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */,
+				0BCE0E1F265F9AD2005DB0EC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0B79C717266096430086C1D4 /* XCRemoteSwiftPackageReference "Mocker" */,
 			);
 			productRefGroup = 0B8F4D4426450FF9001D2BC1 /* Products */;
 			projectDirPath = "";
@@ -276,8 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */,
 				0BF09DDB2653A7D200C25048 /* Device.swift in Sources */,
+				0B79C7272660F18E0086C1D4 /* AwareError.swift in Sources */,
 				0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */,
+				0B79C7222660D1DE0086C1D4 /* Date+timestamp.swift in Sources */,
+				0B0DBEB4266641C200C0BA01 /* ClientSendEventParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +355,9 @@
 			files = (
 				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
 				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
+				0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */,
+				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
+				0B862B042666097A005E242D /* AwareError+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +619,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0B79C717266096430086C1D4 /* XCRemoteSwiftPackageReference "Mocker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WeTransfer/Mocker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
 		0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo";
@@ -556,13 +635,36 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		0BCE0E1F265F9AD2005DB0EC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B79C71B2660B2D40086C1D4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BCE0E1F265F9AD2005DB0EC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0B79C71D2660B2D80086C1D4 /* Mocker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B79C717266096430086C1D4 /* XCRemoteSwiftPackageReference "Mocker" */;
+			productName = Mocker;
+		};
 		0B951B63265778F900E7242E /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B951B62265778F900E7242E /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
+		};
+		0BCE0E20265F9AD2005DB0EC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BCE0E1F265F9AD2005DB0EC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
