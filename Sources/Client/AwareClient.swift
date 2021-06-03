@@ -15,14 +15,17 @@ class AwareClient {
     completion: @escaping (Result<Void, AwareError>) -> Void
   ) {
     let parameters = params.toBody()
+    let responseSerializer = DataResponseSerializer(emptyResponseCodes: [200, 201, 204, 206])
     session
       .request(
         "\(AwareClient.BASE_URL)/signals?pid=\(params.projectId)",
         method: .post,
-        parameters: parameters
+        parameters: parameters,
+        encoding: JSONEncoding.default,
+        headers: ["Content-Type": "application/json"]
       )
       .validate()
-      .responseJSON { [weak self] response in
+      .response(responseSerializer: responseSerializer) { [weak self] response in
         switch response.result {
           case .success:
             completion(.success(()))
