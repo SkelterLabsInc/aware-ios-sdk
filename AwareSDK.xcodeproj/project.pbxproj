@@ -11,6 +11,10 @@
 		0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */; };
 		0B0DBEB4266641C200C0BA01 /* ClientSendEventParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DBEB3266641C200C0BA01 /* ClientSendEventParams.swift */; };
 		0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0DBEB7266641EF00C0BA01 /* ClientSendEventParamsTest.swift */; };
+		0B4C3E14266DC4E000E577A3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C3E13266DC4E000E577A3 /* Event.swift */; };
+		0B4C3E16266DC4FA00E577A3 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C3E15266DC4FA00E577A3 /* EventType.swift */; };
+		0B4C3E18266DC6B800E577A3 /* HomeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C3E17266DC6B800E577A3 /* HomeEvent.swift */; };
+		0B4C3E1B266DC7BE00E577A3 /* HomeEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C3E1A266DC7BE00E577A3 /* HomeEventTest.swift */; };
 		0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C715266095D10086C1D4 /* AwareClientTest.swift */; };
 		0B79C71C2660B2D40086C1D4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0B79C71B2660B2D40086C1D4 /* Alamofire */; };
 		0B79C71E2660B2D80086C1D4 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 0B79C71D2660B2D80086C1D4 /* Mocker */; };
@@ -40,6 +44,10 @@
 		0B00EDF9264D2EE600CC3541 /* AwareSDKTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareSDKTest.swift; sourceTree = "<group>"; };
 		0B0DBEB3266641C200C0BA01 /* ClientSendEventParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSendEventParams.swift; sourceTree = "<group>"; };
 		0B0DBEB7266641EF00C0BA01 /* ClientSendEventParamsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSendEventParamsTest.swift; sourceTree = "<group>"; };
+		0B4C3E13266DC4E000E577A3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0B4C3E15266DC4FA00E577A3 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		0B4C3E17266DC6B800E577A3 /* HomeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEvent.swift; sourceTree = "<group>"; };
+		0B4C3E1A266DC7BE00E577A3 /* HomeEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventTest.swift; sourceTree = "<group>"; };
 		0B79C711266093EB0086C1D4 /* AwareClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareClient.swift; sourceTree = "<group>"; };
 		0B79C715266095D10086C1D4 /* AwareClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwareClientTest.swift; sourceTree = "<group>"; };
 		0B79C7202660D15C0086C1D4 /* Date+timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+timestamp.swift"; sourceTree = "<group>"; };
@@ -102,6 +110,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0B4C3E12266DC4BA00E577A3 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0B4C3E13266DC4E000E577A3 /* Event.swift */,
+				0B4C3E15266DC4FA00E577A3 /* EventType.swift */,
+				0B4C3E17266DC6B800E577A3 /* HomeEvent.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		0B4C3E19266DC7AE00E577A3 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0B4C3E1A266DC7BE00E577A3 /* HomeEventTest.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		0B79C71A2660B2D40086C1D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0B0DBEB2266641AD00C0BA01 /* Client */,
+				0B4C3E12266DC4BA00E577A3 /* Events */,
 				0B79C71F2660D1390086C1D4 /* Extensions */,
 				0B951B5F2657768F00E7242E /* Protocols */,
 				0B44FCE12645574200DF7ED1 /* Supporting Files */,
@@ -159,6 +186,7 @@
 		0B8F4D5026450FF9001D2BC1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0B4C3E19266DC7AE00E577A3 /* Events */,
 				0B862B0226660878005E242D /* Helpers */,
 				0B44FCE2264557AF00DF7ED1 /* Supporting Files */,
 				0B951B602657786B00E7242E /* GeneratedMocks.swift */,
@@ -340,11 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4C3E18266DC6B800E577A3 /* HomeEvent.swift in Sources */,
 				0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */,
 				0BF09DDB2653A7D200C25048 /* Device.swift in Sources */,
 				0B79C7272660F18E0086C1D4 /* AwareError.swift in Sources */,
 				0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */,
 				0B79C7222660D1DE0086C1D4 /* Date+timestamp.swift in Sources */,
+				0B4C3E14266DC4E000E577A3 /* Event.swift in Sources */,
+				0B4C3E16266DC4FA00E577A3 /* EventType.swift in Sources */,
 				0B0DBEB4266641C200C0BA01 /* ClientSendEventParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
+				0B4C3E1B266DC7BE00E577A3 /* HomeEventTest.swift in Sources */,
 				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
 				0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */,
 				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
