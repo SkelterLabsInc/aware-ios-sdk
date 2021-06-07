@@ -13,6 +13,7 @@ class AwareClientTest: XCTestCase {
   lazy var VALID_SEND_EVENT_PARAMS = ClientSendEventParams(
     projectId: PROJECT_ID,
     iid: IID,
+    userId: nil,
     field: [
       "type": TYPE,
       "timestamp": TIMESTAMP,
