@@ -45,6 +45,14 @@ class AwareSDKTest: XCTestCase {
     XCTAssertEqual(uut.userId, USER_ID)
   }
 
+  func test_whenUnsettingUserId_thenSDKUserIdIsUnset() {
+    uut.setUserId(userId: USER_ID)
+
+    uut.unsetUser()
+
+    XCTAssertEqual(uut.userId, nil)
+  }
+
   func test_whenGivenClientResolvesSuccess_thenSendEventSucceed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)

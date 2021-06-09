@@ -29,6 +29,12 @@ public class AwareSDK {
     }
   }
 
+  func unsetUser() {
+    serialQueue.sync { [weak self] in
+      self?.userId = nil
+    }
+  }
+
   func track(event: Event) {
     serialQueue.async { [weak self] in
       guard let self = self, let projectId = self.projectId, let iid = self.iid else {
@@ -82,6 +88,10 @@ public extension AwareSDK {
 
   static func setUserId(userId: String) {
     sharedInstance.setUserId(userId: userId)
+  }
+
+  static func unsetUser() {
+    sharedInstance.unsetUser()
   }
 
   static func track(event: Event) {
