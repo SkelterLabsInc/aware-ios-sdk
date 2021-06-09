@@ -83,4 +83,8 @@ public extension AwareSDK {
   static func setUserId(userId: String) {
     sharedInstance.setUserId(userId: userId)
   }
+
+  static func track(event: Event) {
+    sharedInstance.track(event: event)
+  }
 }

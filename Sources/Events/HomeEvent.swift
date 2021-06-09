@@ -1,19 +1,11 @@
 import Foundation
 
-public struct HomeEvent: Event {
-  let type: EventType
-  let timestamp: Int64
-
+public class HomeEvent: Event {
   init(date: Date) {
-    type = .home
-    timestamp = date.timestamp
+    super.init(type: .home, date: date)
   }
 
-  public init() {
+  public convenience init() {
     self.init(date: Date())
-  }
-
-  func makeEventSpecificCustomField() -> CustomField {
-    [:]
   }
 }

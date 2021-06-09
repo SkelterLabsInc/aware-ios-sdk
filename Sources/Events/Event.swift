@@ -2,16 +2,15 @@ import Foundation
 
 typealias CustomField = [String: AnyHashable]
 
-protocol Event {
-  var type: EventType { get }
-  var timestamp: Int64 { get }
+public class Event {
+  let type: EventType
+  let timestamp: Int64
 
-  func toCustomField() -> CustomField
+  init(type: EventType, date: Date = Date()) {
+    self.type = type
+    timestamp = date.timestamp
+  }
 
-  func makeEventSpecificCustomField() -> CustomField
-}
-
-extension Event {
   func toCustomField() -> CustomField {
     let defaultCustomField: CustomField = [
       "type": type.rawValue,
@@ -19,6 +18,10 @@ extension Event {
     ]
     let customField = mergeCustomFields(defaultCustomField, makeEventSpecificCustomField())
     return customField
+  }
+
+  func makeEventSpecificCustomField() -> CustomField {
+    [:]
   }
 
   private func mergeCustomFields(_ lhs: CustomField, _ rhs: CustomField) -> CustomField {
