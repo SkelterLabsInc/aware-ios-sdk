@@ -1,7 +1,7 @@
 import Alamofire
 import Foundation
 
-class AwareClient {
+class AwareClient: Client {
   static let BASE_URL = "https://aiq.skelterlabs.com/aware/sdk/v2"
 
   let session: Alamofire.Session
@@ -12,7 +12,7 @@ class AwareClient {
 
   func sendEvent(
     params: ClientSendEventParams,
-    completion: @escaping (Result<Void, AwareError>) -> Void
+    completion: @escaping (Result<Void, ClientError>) -> Void
   ) {
     let parameters = params.toBody()
     let responseSerializer = DataResponseSerializer(emptyResponseCodes: [200, 201, 204, 206])

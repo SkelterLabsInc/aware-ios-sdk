@@ -1,8 +1,8 @@
 @testable import AwareSDK
 import Foundation
 
-extension AwareError: Equatable {
-  public static func == (lhs: AwareError, rhs: AwareError) -> Bool {
+extension ClientError: Equatable {
+  public static func == (lhs: ClientError, rhs: ClientError) -> Bool {
     switch (lhs, rhs) {
       case let (.badRequest(lhsMessage), .badRequest(rhsMessage)):
         return lhsMessage == rhsMessage

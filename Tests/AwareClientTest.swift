@@ -43,7 +43,7 @@ class AwareClientTest: XCTestCase {
       url: URL(string: "\(AwareClient.BASE_URL)/signals?pid=\(PROJECT_ID)")!,
       dataType: .json,
       statusCode: 200,
-      data: [.post: Data("{}".utf8)]
+      data: [.post: Data("".utf8)]
     )
     mock.register()
   }
