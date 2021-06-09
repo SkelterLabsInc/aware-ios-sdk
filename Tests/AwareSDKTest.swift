@@ -53,6 +53,18 @@ class AwareSDKTest: XCTestCase {
     XCTAssertEqual(uut.userId, nil)
   }
 
+  func test_whenSettingDebugTrue_thenSDKDebugIsSetByTrue() {
+    uut.setDebug(debug: true)
+
+    XCTAssertEqual(uut.debug, true)
+  }
+
+  func test_whenSettingDebugFalse_thenSDKDebugIsSetByFalse() {
+    uut.setDebug(debug: false)
+
+    XCTAssertEqual(uut.debug, false)
+  }
+
   func test_whenGivenClientResolvesSuccess_thenSendEventSucceed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
