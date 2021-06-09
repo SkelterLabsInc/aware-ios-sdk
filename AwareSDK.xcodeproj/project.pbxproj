@@ -25,6 +25,8 @@
 		0B8BD27526709A5E002F6171 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD27426709A5E002F6171 /* Event.swift */; };
 		0B8BD2772670A58F002F6171 /* JoinEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2762670A58F002F6171 /* JoinEvent.swift */; };
 		0B8BD2792670A5F0002F6171 /* JoinEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2782670A5F0002F6171 /* JoinEventTest.swift */; };
+		0B8BD27B2670A6B2002F6171 /* LoginEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD27A2670A6B2002F6171 /* LoginEvent.swift */; };
+		0B8BD27D2670A6FB002F6171 /* LoginEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD27C2670A6FB002F6171 /* LoginEventTest.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
@@ -63,6 +65,8 @@
 		0B8BD27426709A5E002F6171 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0B8BD2762670A58F002F6171 /* JoinEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEvent.swift; sourceTree = "<group>"; };
 		0B8BD2782670A5F0002F6171 /* JoinEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEventTest.swift; sourceTree = "<group>"; };
+		0B8BD27A2670A6B2002F6171 /* LoginEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEvent.swift; sourceTree = "<group>"; };
+		0B8BD27C2670A6FB002F6171 /* LoginEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEventTest.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 				0B4C3E15266DC4FA00E577A3 /* EventType.swift */,
 				0B4C3E17266DC6B800E577A3 /* HomeEvent.swift */,
 				0B8BD2762670A58F002F6171 /* JoinEvent.swift */,
+				0B8BD27A2670A6B2002F6171 /* LoginEvent.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			children = (
 				0B4C3E1A266DC7BE00E577A3 /* HomeEventTest.swift */,
 				0B8BD2782670A5F0002F6171 /* JoinEventTest.swift */,
+				0B8BD27C2670A6FB002F6171 /* LoginEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B8BD2772670A58F002F6171 /* JoinEvent.swift in Sources */,
+				0B8BD27B2670A6B2002F6171 /* LoginEvent.swift in Sources */,
 				0B4C3E18266DC6B800E577A3 /* HomeEvent.swift in Sources */,
 				0B8BD27526709A5E002F6171 /* Event.swift in Sources */,
 				0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */,
@@ -409,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
+				0B8BD27D2670A6FB002F6171 /* LoginEventTest.swift in Sources */,
 				0B4C3E1B266DC7BE00E577A3 /* HomeEventTest.swift in Sources */,
 				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
 				0B8BD271267092B3002F6171 /* ClientErrorTest.swift in Sources */,
