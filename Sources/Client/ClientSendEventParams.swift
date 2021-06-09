@@ -33,6 +33,11 @@ struct ClientSendEventParams {
       "user_id": userId ?? "",
       "field_type": "OBJECT",
       "fields": [["object_value": field]],
+      "device": [
+        "platform": "mobile",
+        "os": "iOS",
+        "manufacturer": "Apple",
+      ],
     ]
     let body: [String: AnyHashable] = [
       "signals": [[

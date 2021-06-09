@@ -43,6 +43,11 @@ class ClientSendEventParamsTest: XCTestCase {
       "fields": [[
         "object_value": expectedField,
       ]],
+      "device": [
+        "platform": "mobile",
+        "os": "iOS",
+        "manufacturer": "Apple",
+      ],
     ]
     let expectedResult: [String: AnyHashable] = [
       "signals": [[
@@ -79,6 +84,11 @@ class ClientSendEventParamsTest: XCTestCase {
       "fields": [[
         "object_value": expectedField,
       ]],
+      "device": [
+        "platform": "mobile",
+        "os": "iOS",
+        "manufacturer": "Apple",
+      ],
     ]
     let expectedResult: [String: AnyHashable] = [
       "signals": [[
