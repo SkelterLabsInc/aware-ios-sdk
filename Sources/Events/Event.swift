@@ -11,7 +11,7 @@ public class Event {
     timestamp = date.timestamp
   }
 
-  func toCustomField() -> CustomField {
+  final func toCustomField() -> CustomField {
     let defaultCustomField: CustomField = [
       "type": type.rawValue,
       "timestamp": timestamp,
