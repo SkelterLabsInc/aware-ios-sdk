@@ -8,7 +8,7 @@ class AwareSDKTest: XCTestCase {
   let IDENTIFIER = UUID()
   let USER_ID = "test-user-id"
   let DATE = Date()
-  lazy var EVENT = HomeEvent(date: DATE)
+  lazy var EVENT = JoinEvent(date: DATE)
   lazy var PARAMS = ClientSendEventParams(
     projectId: PROJECT_ID,
     iid: IDENTIFIER.uuidString,
@@ -17,9 +17,12 @@ class AwareSDKTest: XCTestCase {
   )
 
   var client: ClientMock!
-
   var device: MockDevice!
   var uut: AwareSDK!
+
+  func expectSendEventNotCalled() {
+    XCTAssertEqual(client.callCount, 0)
+  }
 
   override func setUp() {
     super.setUp()
@@ -65,15 +68,52 @@ class AwareSDKTest: XCTestCase {
     XCTAssertEqual(uut.debug, false)
   }
 
+  func test_whenTrackJoinEventWithoutUserId_thenDoNotSendEvent() {
+    uut.configure(projectId: PROJECT_ID)
+
+    let event = JoinEvent()
+    uut.track(event: event)
+
+    expectSendEventNotCalled()
+  }
+
+  func test_whenTrackLoginEventWithoutUserId_thenDoNotSendEvent() {
+    uut.configure(projectId: PROJECT_ID)
+
+    let event = LoginEvent()
+    uut.track(event: event)
+
+    expectSendEventNotCalled()
+  }
+
+  func test_whenTrackLogoutEventWithoutUserId_thenDoNotSendEvent() {
+    uut.configure(projectId: PROJECT_ID)
+
+    let event = LogoutEvent()
+    uut.track(event: event)
+
+    expectSendEventNotCalled()
+  }
+
+  func test_whenTrackLikeEventWithoutUserId_thenDoNotSendEvent() {
+    uut.configure(projectId: PROJECT_ID)
+
+    let item = LikeEventItem(id: "test-item-id")
+    let event = LikeEvent(item: item)
+    uut.track(event: event)
+
+    expectSendEventNotCalled()
+  }
+
   func test_whenGivenClientResolvesSuccess_thenSendEventSucceed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
     client.sendEventCalled(with: PARAMS, result: .success(())) {
       expectation.fulfill()
     }
 
-    let event = HomeEvent(date: DATE)
-    uut.track(event: event)
+    uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
   }
@@ -81,6 +121,7 @@ class AwareSDKTest: XCTestCase {
   func test_whenGivenClientResolvesBadRequest_thenSendEventFailed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
     client.sendEventCalled(
       with: PARAMS,
       result: .failure(.badRequest(message: "BAD REQUEST MESSAGE"))
@@ -96,6 +137,7 @@ class AwareSDKTest: XCTestCase {
   func test_whenGivenClientResolvesUnauthorized_thenSendEventFailed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
     client.sendEventCalled(
       with: PARAMS,
       result: .failure(.unauthorized(message: "UNAUTHORIZED MESSAGE"))
@@ -111,6 +153,7 @@ class AwareSDKTest: XCTestCase {
   func test_whenGivenClientResolvesInternalServerError_thenSendEventFailed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
     client.sendEventCalled(
       with: PARAMS,
       result: .failure(.internalServerError(message: "INTERNAL SERVER ERROR MESSAGE"))
@@ -126,6 +169,7 @@ class AwareSDKTest: XCTestCase {
   func test_whenGivenClientResolvesUnknown_thenSendEventFailed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
     client.sendEventCalled(with: PARAMS, result: .failure(.unknown(message: "UNKNOWN MESSAGE"))) {
       expectation.fulfill()
     }

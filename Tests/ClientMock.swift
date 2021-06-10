@@ -5,6 +5,7 @@ class ClientMock: Client {
   var expectedParams: ClientSendEventParams!
   var result: Result<Void, ClientError>!
   var callback: (() -> Void)!
+  var callCount = 0
 
   func sendEventCalled(
     with params: ClientSendEventParams,
@@ -20,6 +21,7 @@ class ClientMock: Client {
     params: ClientSendEventParams,
     completion: (Result<Void, ClientError>) -> Void
   ) {
+    callCount += 1
     if expectedParams == params {
       completion(result)
       callback()
