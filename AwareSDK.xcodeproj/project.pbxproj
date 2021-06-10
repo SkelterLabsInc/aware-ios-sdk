@@ -46,6 +46,8 @@
 		0B8BD2AD26721518002F6171 /* AddToCartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2AC26721518002F6171 /* AddToCartEventTest.swift */; };
 		0B8BD2B1267218C7002F6171 /* RemoveFromCartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B0267218C7002F6171 /* RemoveFromCartEvent.swift */; };
 		0B8BD2B3267218F6002F6171 /* RemoveFromCartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */; };
+		0B8BD2B726721C0B002F6171 /* CartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B626721C0B002F6171 /* CartEvent.swift */; };
+		0B8BD2B926721C2B002F6171 /* CartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B826721C2B002F6171 /* CartEventTest.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
@@ -105,6 +107,8 @@
 		0B8BD2AC26721518002F6171 /* AddToCartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartEventTest.swift; sourceTree = "<group>"; };
 		0B8BD2B0267218C7002F6171 /* RemoveFromCartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromCartEvent.swift; sourceTree = "<group>"; };
 		0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromCartEventTest.swift; sourceTree = "<group>"; };
+		0B8BD2B626721C0B002F6171 /* CartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartEvent.swift; sourceTree = "<group>"; };
+		0B8BD2B826721C2B002F6171 /* CartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartEventTest.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +186,7 @@
 				0B8BD29C267207CD002F6171 /* LikeEvent.swift */,
 				0B8BD2AA267214E5002F6171 /* AddToCartEvent.swift */,
 				0B8BD2B0267218C7002F6171 /* RemoveFromCartEvent.swift */,
+				0B8BD2B626721C0B002F6171 /* CartEvent.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				0B8BD2AC26721518002F6171 /* AddToCartEventTest.swift */,
 				0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */,
 				0B8BD2962671FCE9002F6171 /* Fixtures.swift */,
+				0B8BD2B826721C2B002F6171 /* CartEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				0B8BD29D267207CD002F6171 /* LikeEvent.swift in Sources */,
 				0B8BD2812670B945002F6171 /* LogoutEvent.swift in Sources */,
 				0B8BD2772670A58F002F6171 /* JoinEvent.swift in Sources */,
+				0B8BD2B726721C0B002F6171 /* CartEvent.swift in Sources */,
 				0B8BD27B2670A6B2002F6171 /* LoginEvent.swift in Sources */,
 				0B4C3E18266DC6B800E577A3 /* HomeEvent.swift in Sources */,
 				0B8BD27526709A5E002F6171 /* Event.swift in Sources */,
@@ -513,6 +520,7 @@
 				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
 				0B8BD2A12672096C002F6171 /* LikeEventItemTest.swift in Sources */,
 				0B8BD2792670A5F0002F6171 /* JoinEventTest.swift in Sources */,
+				0B8BD2B926721C2B002F6171 /* CartEventTest.swift in Sources */,
 				0BBFAB6E266FC08C004C4C28 /* ClientMock.swift in Sources */,
 				0BBFAB71266FC0EC004C4C28 /* ClientSendEventParams+Equatable.swift in Sources */,
 				0B8BD2A926721448002F6171 /* CartEventItemTest.swift in Sources */,
