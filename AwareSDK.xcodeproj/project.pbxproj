@@ -48,6 +48,8 @@
 		0B8BD2B3267218F6002F6171 /* RemoveFromCartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */; };
 		0B8BD2B726721C0B002F6171 /* CartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B626721C0B002F6171 /* CartEvent.swift */; };
 		0B8BD2B926721C2B002F6171 /* CartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2B826721C2B002F6171 /* CartEventTest.swift */; };
+		0B8BD2BB26721C7F002F6171 /* PurchaseStartEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2BA26721C7F002F6171 /* PurchaseStartEvent.swift */; };
+		0B8BD2BE26721D00002F6171 /* PurchaseStartEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2BC26721C9E002F6171 /* PurchaseStartEventTest.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
@@ -109,6 +111,8 @@
 		0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveFromCartEventTest.swift; sourceTree = "<group>"; };
 		0B8BD2B626721C0B002F6171 /* CartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartEvent.swift; sourceTree = "<group>"; };
 		0B8BD2B826721C2B002F6171 /* CartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartEventTest.swift; sourceTree = "<group>"; };
+		0B8BD2BA26721C7F002F6171 /* PurchaseStartEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseStartEvent.swift; sourceTree = "<group>"; };
+		0B8BD2BC26721C9E002F6171 /* PurchaseStartEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseStartEventTest.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +191,7 @@
 				0B8BD2AA267214E5002F6171 /* AddToCartEvent.swift */,
 				0B8BD2B0267218C7002F6171 /* RemoveFromCartEvent.swift */,
 				0B8BD2B626721C0B002F6171 /* CartEvent.swift */,
+				0B8BD2BA26721C7F002F6171 /* PurchaseStartEvent.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				0B8BD2B2267218F6002F6171 /* RemoveFromCartEventTest.swift */,
 				0B8BD2962671FCE9002F6171 /* Fixtures.swift */,
 				0B8BD2B826721C2B002F6171 /* CartEventTest.swift */,
+				0B8BD2BC26721C9E002F6171 /* PurchaseStartEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -488,6 +494,7 @@
 				0B8BD2A72672139B002F6171 /* CartEventItem.swift in Sources */,
 				0B8BD28A2670BE0C002F6171 /* ItemEventItem.swift in Sources */,
 				0B00EDF6264D298B00CC3541 /* AwareSDK.swift in Sources */,
+				0B8BD2BB26721C7F002F6171 /* PurchaseStartEvent.swift in Sources */,
 				0BBFAB74266FC718004C4C28 /* OSLog+aware.swift in Sources */,
 				0B8BD2B1267218C7002F6171 /* RemoveFromCartEvent.swift in Sources */,
 				0B79C7222660D1DE0086C1D4 /* Date+timestamp.swift in Sources */,
@@ -505,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B8BD2932670CE75002F6171 /* ItemEventTest.swift in Sources */,
+				0B8BD2BE26721D00002F6171 /* PurchaseStartEventTest.swift in Sources */,
 				0B8BD2B3267218F6002F6171 /* RemoveFromCartEventTest.swift in Sources */,
 				0B8BD27F2670B928002F6171 /* LogoutEventTest.swift in Sources */,
 				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
