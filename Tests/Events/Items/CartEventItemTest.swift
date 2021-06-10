@@ -1,7 +1,7 @@
 @testable import AwareSDK
 import XCTest
 
-class AddToCartEventItemTest: XCTestCase {
+class CartEventItemTest: XCTestCase {
   let ID = "test-id"
   let TITLE = "test-title"
   let PRICE = 10000
@@ -10,10 +10,10 @@ class AddToCartEventItemTest: XCTestCase {
   let BRAND_NAME = "test-brand-name"
   let IMAGE_URL = "test-image-url"
 
-  var uut: AddToCartEventItem!
+  var uut: CartEventItem!
 
   func test_whenToItemFieldMethodIsCalledWithNilFields_returnItemField() {
-    uut = AddToCartEventItem(id: ID, quantity: QUANTITY)
+    uut = CartEventItem(id: ID, quantity: QUANTITY)
 
     let result = uut.toItemField()
 
@@ -24,7 +24,7 @@ class AddToCartEventItemTest: XCTestCase {
   }
 
   func test_whenToItemFieldMethodIsCalled_returnItemField() {
-    uut = AddToCartEventItem(
+    uut = CartEventItem(
       id: ID,
       title: TITLE,
       price: PRICE,

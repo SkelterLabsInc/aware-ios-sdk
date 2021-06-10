@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AddToCartEventItem {
+public struct CartEventItem {
   let id: String
   let title: String?
   let price: Int?

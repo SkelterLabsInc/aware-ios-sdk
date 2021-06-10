@@ -1,14 +1,14 @@
 import Foundation
 
 public class AddToCartEvent: Event {
-  let item: AddToCartEventItem
+  let item: CartEventItem
 
-  init(item: AddToCartEventItem, date: Date) {
+  init(item: CartEventItem, date: Date) {
     self.item = item
     super.init(type: .addToCart, date: date)
   }
 
-  public convenience init(item: AddToCartEventItem) {
+  public convenience init(item: CartEventItem) {
     self.init(item: item, date: Date())
   }
 

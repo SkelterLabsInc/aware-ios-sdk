@@ -2,7 +2,7 @@
 import XCTest
 
 class AddToCartEventTest: XCTestCase {
-  let ITEM = AddToCartEventItem(id: "test-id", quantity: 100)
+  let ITEM = CartEventItem(id: "test-id", quantity: 100)
   let DATE = Date()
 
   var uut: AddToCartEvent!
