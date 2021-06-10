@@ -11,6 +11,6 @@ class JoinEventTest: XCTestCase {
 
     let result = uut.toCustomField()
 
-    XCTAssertEqual(result, ["type": "join", "timestamp": DATE.timestamp])
+    XCTAssertEqual(result, ["type": "join", "timestamp": DATE.timestamp, "device": DEVICE])
   }
 }

@@ -34,20 +34,15 @@ class ClientSendEventParamsTest: XCTestCase {
     let expectedCustomSignal: [String: AnyHashable] = [
       "iid": IID,
       "pid": PROJECT_ID,
+      "uid": "",
       "timestamp": CURRENT_DATE.timestamp,
       "namespace": "aware",
       "name": "event_log",
       "time_zone": "Asia/Seoul",
-      "user_id": "",
       "field_type": "OBJECT",
       "fields": [[
         "object_value": expectedField,
       ]],
-      "device": [
-        "platform": "mobile",
-        "os": "iOS",
-        "manufacturer": "Apple",
-      ],
     ]
     let expectedResult: [String: AnyHashable] = [
       "signals": [[
@@ -75,7 +70,7 @@ class ClientSendEventParamsTest: XCTestCase {
     let expectedCustomSignal: [String: AnyHashable] = [
       "iid": IID,
       "pid": PROJECT_ID,
-      "user_id": USER_ID,
+      "uid": USER_ID,
       "timestamp": CURRENT_DATE.timestamp,
       "namespace": "aware",
       "name": "event_log",
@@ -84,11 +79,6 @@ class ClientSendEventParamsTest: XCTestCase {
       "fields": [[
         "object_value": expectedField,
       ]],
-      "device": [
-        "platform": "mobile",
-        "os": "iOS",
-        "manufacturer": "Apple",
-      ],
     ]
     let expectedResult: [String: AnyHashable] = [
       "signals": [[

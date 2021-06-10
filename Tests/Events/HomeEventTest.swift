@@ -11,6 +11,6 @@ class HomeEventTest: XCTestCase {
 
     let result = uut.toCustomField()
 
-    XCTAssertEqual(result, ["type": "home", "timestamp": DATE.timestamp])
+    XCTAssertEqual(result, ["type": "home", "timestamp": DATE.timestamp, "device": DEVICE])
   }
 }

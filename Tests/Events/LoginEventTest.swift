@@ -11,6 +11,6 @@ class LoginEventTest: XCTestCase {
 
     let result = uut.toCustomField()
 
-    XCTAssertEqual(result, ["type": "login", "timestamp": DATE.timestamp])
+    XCTAssertEqual(result, ["type": "login", "timestamp": DATE.timestamp, "device": DEVICE])
   }
 }

@@ -26,6 +26,7 @@ class ItemEventTest: XCTestCase {
       [
         "type": "item",
         "timestamp": DATE.timestamp,
+        "device": DEVICE,
         "item": ITEM.toItemField(),
       ]
     )

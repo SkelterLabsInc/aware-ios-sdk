@@ -11,6 +11,6 @@ class LogoutEventTest: XCTestCase {
 
     let result = uut.toCustomField()
 
-    XCTAssertEqual(result, ["type": "logout", "timestamp": DATE.timestamp])
+    XCTAssertEqual(result, ["type": "logout", "timestamp": DATE.timestamp, "device": DEVICE])
   }
 }

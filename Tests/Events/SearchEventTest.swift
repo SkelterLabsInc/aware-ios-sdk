@@ -17,6 +17,7 @@ class SearchEventTest: XCTestCase {
       [
         "type": "search",
         "timestamp": DATE.timestamp,
+        "device": DEVICE,
         "query": QUERY,
       ]
     )

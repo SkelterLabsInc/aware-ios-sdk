@@ -15,6 +15,11 @@ public class Event {
     let defaultCustomField: CustomField = [
       "type": type.rawValue,
       "timestamp": timestamp,
+      "device": [
+        "platform": "mobile",
+        "os": "iOS",
+        "manufacturer": "Apple",
+      ],
     ]
     let customField = mergeCustomFields(defaultCustomField, makeEventSpecificCustomField())
     return customField

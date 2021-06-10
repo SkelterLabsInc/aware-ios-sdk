@@ -35,6 +35,7 @@
 		0B8BD28E2670BFD7002F6171 /* ItemEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD28D2670BFD7002F6171 /* ItemEvent.swift */; };
 		0B8BD2902670C042002F6171 /* ItemEventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD28F2670C042002F6171 /* ItemEventItem.swift */; };
 		0B8BD2932670CE75002F6171 /* ItemEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2922670CE75002F6171 /* ItemEventTest.swift */; };
+		0B8BD2972671FCE9002F6171 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2962671FCE9002F6171 /* Fixtures.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
@@ -83,6 +84,7 @@
 		0B8BD28D2670BFD7002F6171 /* ItemEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEvent.swift; sourceTree = "<group>"; };
 		0B8BD28F2670C042002F6171 /* ItemEventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEventItem.swift; sourceTree = "<group>"; };
 		0B8BD2922670CE75002F6171 /* ItemEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEventTest.swift; sourceTree = "<group>"; };
+		0B8BD2962671FCE9002F6171 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				0B8BD27E2670B928002F6171 /* LogoutEventTest.swift */,
 				0B8BD2842670BAA8002F6171 /* SearchEventTest.swift */,
 				0B8BD2922670CE75002F6171 /* ItemEventTest.swift */,
+				0B8BD2962671FCE9002F6171 /* Fixtures.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
 				0B8BD271267092B3002F6171 /* ClientErrorTest.swift in Sources */,
 				0B8BD2852670BAA8002F6171 /* SearchEventTest.swift in Sources */,
+				0B8BD2972671FCE9002F6171 /* Fixtures.swift in Sources */,
 				0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */,
 				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
 				0B8BD2792670A5F0002F6171 /* JoinEventTest.swift in Sources */,

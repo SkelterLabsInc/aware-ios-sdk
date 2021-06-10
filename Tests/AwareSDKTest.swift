@@ -8,13 +8,13 @@ class AwareSDKTest: XCTestCase {
   let IDENTIFIER = UUID()
   let USER_ID = "test-user-id"
   let DATE = Date()
+  lazy var EVENT = HomeEvent(date: DATE)
   lazy var PARAMS = ClientSendEventParams(
     projectId: PROJECT_ID,
     iid: IDENTIFIER.uuidString,
     userId: USER_ID,
-    field: ["type": "home", "timestamp": DATE.timestamp]
+    field: EVENT.toCustomField()
   )
-  lazy var EVENT = HomeEvent(date: DATE)
 
   var client: ClientMock!
 
