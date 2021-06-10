@@ -178,4 +178,27 @@ class AwareSDKTest: XCTestCase {
 
     wait(for: [expectation], timeout: 10.0)
   }
+
+  func test_whenLogoutMethodIsCalled_thenSendEventAndUnsetUserIsCalled() {
+    let expectation = XCTestExpectation()
+    uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
+    let params = ClientSendEventParams(
+      projectId: PROJECT_ID,
+      iid: IDENTIFIER.uuidString,
+      userId: USER_ID,
+      field: LogoutEvent().toCustomField()
+    )
+    client.sendEventCalled(
+      with: params,
+      result: .success(())
+    ) {
+      expectation.fulfill()
+    }
+    uut.logout()
+
+    wait(for: [expectation], timeout: 10.0)
+    XCTAssertEqual(client.callCount, 1)
+    XCTAssertEqual(uut.userId, nil)
+  }
 }

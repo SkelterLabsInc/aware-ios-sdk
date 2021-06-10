@@ -82,6 +82,11 @@ public class AwareSDK {
     }
   }
 
+  func logout() {
+    track(event: LogoutEvent())
+    unsetUser()
+  }
+
   // TODO(gaonkim): Consider introducing logger.
   private func logMessage(message: StaticString, _ args: CVarArg...) {
     os_log(message, log: .aware, type: .debug, args)
@@ -124,5 +129,9 @@ public extension AwareSDK {
 
   static func track(event: Event) {
     sharedInstance.track(event: event)
+  }
+
+  static func logout() {
+    sharedInstance.logout()
   }
 }
