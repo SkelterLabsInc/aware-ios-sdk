@@ -58,6 +58,8 @@
 		0B8BD2CB267235E8002F6171 /* ReviewEventItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2CA267235E8002F6171 /* ReviewEventItemTest.swift */; };
 		0B8BD2CD26723629002F6171 /* ReviewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2CC26723629002F6171 /* ReviewEvent.swift */; };
 		0B8BD2CF2672365D002F6171 /* ReviewEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2CE2672365D002F6171 /* ReviewEventTest.swift */; };
+		0B8BD2D126731125002F6171 /* PromotionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2D026731125002F6171 /* PromotionEvent.swift */; };
+		0B8BD2D326731184002F6171 /* PromotionEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD2D226731184002F6171 /* PromotionEventTest.swift */; };
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
@@ -129,6 +131,8 @@
 		0B8BD2CA267235E8002F6171 /* ReviewEventItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEventItemTest.swift; sourceTree = "<group>"; };
 		0B8BD2CC26723629002F6171 /* ReviewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEvent.swift; sourceTree = "<group>"; };
 		0B8BD2CE2672365D002F6171 /* ReviewEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEventTest.swift; sourceTree = "<group>"; };
+		0B8BD2D026731125002F6171 /* PromotionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionEvent.swift; sourceTree = "<group>"; };
+		0B8BD2D226731184002F6171 /* PromotionEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionEventTest.swift; sourceTree = "<group>"; };
 		0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AwareSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D4726450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +213,7 @@
 				0B8BD2B626721C0B002F6171 /* CartEvent.swift */,
 				0B8BD2BA26721C7F002F6171 /* PurchaseStartEvent.swift */,
 				0B8BD2C326723423002F6171 /* PurchaseEvent.swift */,
+				0B8BD2D026731125002F6171 /* PromotionEvent.swift */,
 				0B8BD2CC26723629002F6171 /* ReviewEvent.swift */,
 			);
 			path = Events;
@@ -231,6 +236,7 @@
 				0B8BD2B826721C2B002F6171 /* CartEventTest.swift */,
 				0B8BD2BC26721C9E002F6171 /* PurchaseStartEventTest.swift */,
 				0B8BD2C52672349A002F6171 /* PurchaseEventTest.swift */,
+				0B8BD2D226731184002F6171 /* PromotionEventTest.swift */,
 				0B8BD2CE2672365D002F6171 /* ReviewEventTest.swift */,
 			);
 			path = Events;
@@ -513,6 +519,7 @@
 				0B4C3E18266DC6B800E577A3 /* HomeEvent.swift in Sources */,
 				0B8BD27526709A5E002F6171 /* Event.swift in Sources */,
 				0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */,
+				0B8BD2D126731125002F6171 /* PromotionEvent.swift in Sources */,
 				0BF09DDB2653A7D200C25048 /* Device.swift in Sources */,
 				0B79C7272660F18E0086C1D4 /* ClientError.swift in Sources */,
 				0B8BD2A72672139B002F6171 /* CartEventItem.swift in Sources */,
@@ -547,6 +554,7 @@
 				0B00EDFA264D2EE600CC3541 /* AwareSDKTest.swift in Sources */,
 				0B8BD2A326720A73002F6171 /* LikeEventTest.swift in Sources */,
 				0B8BD27D2670A6FB002F6171 /* LoginEventTest.swift in Sources */,
+				0B8BD2D326731184002F6171 /* PromotionEventTest.swift in Sources */,
 				0B4C3E1B266DC7BE00E577A3 /* HomeEventTest.swift in Sources */,
 				0B8BD2902670C042002F6171 /* ItemEventItemTest.swift in Sources */,
 				0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */,
