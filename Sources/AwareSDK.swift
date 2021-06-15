@@ -50,7 +50,7 @@ public class AwareSDK {
       guard let projectId = self.projectId, let iid = self.iid else {
         if self.debug {
           self.logMessage(
-            message: "track `%@` event failed. configuring SDK is needed.",
+            message: "track %@ event failed. configuring SDK is needed.",
             event.type.rawValue
           )
         }
@@ -60,7 +60,7 @@ public class AwareSDK {
       if self.userId == nil && AwareSDK.userIdNeededTypes.contains(event.type) {
         if self.debug {
           self.logMessage(
-            message: "track `%@` event failed. set user ID before tracking.",
+            message: "track %@ event failed. set user ID before tracking.",
             event.type.rawValue
           )
         }
@@ -95,10 +95,10 @@ public class AwareSDK {
   private func logTrackResult(event: Event, result: Result<Void, ClientError>) {
     switch result {
       case .success:
-        logMessage(message: "track `%@` event success", event.type.rawValue)
+        logMessage(message: "track %@ event success", event.type.rawValue)
       case let .failure(error):
         logMessage(
-          message: "track `%@` event failed with %@",
+          message: "track %@ event failed with %@",
           event.type.rawValue,
           error.message
         )
