@@ -14,4 +14,5 @@ enum EventType: String {
   case promotion
   case review
   case clickRecomItem = "click recom item"
+  case imprRecomItems = "impr recom items"
 }
