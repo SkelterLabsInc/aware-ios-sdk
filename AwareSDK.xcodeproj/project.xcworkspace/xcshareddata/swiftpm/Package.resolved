@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
+        }
+      },
+      {
         "package": "Cuckoo",
         "repositoryURL": "https://github.com/Brightify/Cuckoo",
         "state": {
           "branch": null,
           "revision": "71d7423add46808b5335a8ec4f1ddc1304c4cfbc",
           "version": "1.5.0"
+        }
+      },
+      {
+        "package": "Mocker",
+        "repositoryURL": "https://github.com/WeTransfer/Mocker",
+        "state": {
+          "branch": null,
+          "revision": "d245ac30ac74c5618ea2e4cc84ccf448f3091e91",
+          "version": "2.5.3"
         }
       }
     ]
