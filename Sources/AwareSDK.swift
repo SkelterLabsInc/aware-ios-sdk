@@ -3,8 +3,6 @@ import os.log
 import UIKit
 
 public class AwareSDK {
-  static let userIdNeededTypes: [EventType] = [.join, .login, .logout, .like]
-
   let serialQueue = DispatchQueue(label: "AwareSDK:SerialQueue")
   let client: Client
   let currentDevice: Device
@@ -51,16 +49,6 @@ public class AwareSDK {
         if self.debug {
           self.logMessage(
             message: "track %@ event failed. configuring SDK is needed.",
-            event.type.rawValue
-          )
-        }
-        return
-      }
-
-      if self.userId == nil && AwareSDK.userIdNeededTypes.contains(event.type) {
-        if self.debug {
-          self.logMessage(
-            message: "track %@ event failed. set user ID before tracking.",
             event.type.rawValue
           )
         }

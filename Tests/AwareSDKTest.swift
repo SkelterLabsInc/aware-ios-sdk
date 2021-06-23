@@ -20,8 +20,8 @@ class AwareSDKTest: XCTestCase {
   var device: MockDevice!
   var uut: AwareSDK!
 
-  func expectSendEventNotCalled() {
-    XCTAssertEqual(client.callCount, 0)
+  func expectSendEventCalledOnce() {
+    XCTAssertEqual(client.callCount, 1)
   }
 
   override func setUp() {
@@ -68,43 +68,6 @@ class AwareSDKTest: XCTestCase {
     XCTAssertEqual(uut.debug, false)
   }
 
-  func test_whenTrackJoinEventWithoutUserId_thenDoNotSendEvent() {
-    uut.configure(projectId: PROJECT_ID)
-
-    let event = JoinEvent()
-    uut.track(event: event)
-
-    expectSendEventNotCalled()
-  }
-
-  func test_whenTrackLoginEventWithoutUserId_thenDoNotSendEvent() {
-    uut.configure(projectId: PROJECT_ID)
-
-    let event = LoginEvent()
-    uut.track(event: event)
-
-    expectSendEventNotCalled()
-  }
-
-  func test_whenTrackLogoutEventWithoutUserId_thenDoNotSendEvent() {
-    uut.configure(projectId: PROJECT_ID)
-
-    let event = LogoutEvent()
-    uut.track(event: event)
-
-    expectSendEventNotCalled()
-  }
-
-  func test_whenTrackLikeEventWithoutUserId_thenDoNotSendEvent() {
-    uut.configure(projectId: PROJECT_ID)
-
-    let item = LikeEventItem(id: "test-item-id")
-    let event = LikeEvent(item: item)
-    uut.track(event: event)
-
-    expectSendEventNotCalled()
-  }
-
   func test_whenGivenClientResolvesSuccess_thenSendEventSucceed() {
     let expectation = XCTestExpectation()
     uut.configure(projectId: PROJECT_ID)
@@ -116,6 +79,7 @@ class AwareSDKTest: XCTestCase {
     uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
   }
 
   func test_whenGivenClientResolvesBadRequest_thenSendEventFailed() {
@@ -132,6 +96,7 @@ class AwareSDKTest: XCTestCase {
     uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
   }
 
   func test_whenGivenClientResolvesUnauthorized_thenSendEventFailed() {
@@ -148,6 +113,7 @@ class AwareSDKTest: XCTestCase {
     uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
   }
 
   func test_whenGivenClientResolvesInternalServerError_thenSendEventFailed() {
@@ -164,6 +130,7 @@ class AwareSDKTest: XCTestCase {
     uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
   }
 
   func test_whenGivenClientResolvesUnknown_thenSendEventFailed() {
@@ -177,6 +144,7 @@ class AwareSDKTest: XCTestCase {
     uut.track(event: EVENT)
 
     wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
   }
 
   func test_whenLogoutMethodIsCalled_thenSendEventAndUnsetUserIsCalled() {
@@ -198,7 +166,7 @@ class AwareSDKTest: XCTestCase {
     uut.logout()
 
     wait(for: [expectation], timeout: 10.0)
-    XCTAssertEqual(client.callCount, 1)
+    expectSendEventCalledOnce()
     XCTAssertEqual(uut.userId, nil)
   }
 }
