@@ -63,6 +63,10 @@
 		0B8F4D4D26450FF9001D2BC1 /* AwareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8F4D4326450FF9001D2BC1 /* AwareSDK.framework */; };
 		0B951B612657786B00E7242E /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B951B602657786B00E7242E /* GeneratedMocks.swift */; };
 		0B951B64265778F900E7242E /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 0B951B63265778F900E7242E /* Cuckoo */; };
+		0BA4FD982683090300CE6080 /* NotificationEventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4FD972683090300CE6080 /* NotificationEventItem.swift */; };
+		0BA4FD9A2683094200CE6080 /* NotificationEventItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4FD992683094200CE6080 /* NotificationEventItemTest.swift */; };
+		0BA4FD9C26830B3800CE6080 /* OpenNotificationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4FD9B26830B3800CE6080 /* OpenNotificationEvent.swift */; };
+		0BA4FD9E26830C6600CE6080 /* OpenNotificationEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4FD9D26830C6600CE6080 /* OpenNotificationEventTest.swift */; };
 		0BBFAB6B266FBFCD004C4C28 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB6A266FBFCD004C4C28 /* Client.swift */; };
 		0BBFAB6E266FC08C004C4C28 /* ClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB6C266FC070004C4C28 /* ClientMock.swift */; };
 		0BBFAB71266FC0EC004C4C28 /* ClientSendEventParams+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB6F266FC0D0004C4C28 /* ClientSendEventParams+Equatable.swift */; };
@@ -144,6 +148,10 @@
 		0B8F4D4C26450FF9001D2BC1 /* AwareSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwareSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8F4D5326450FF9001D2BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B951B602657786B00E7242E /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		0BA4FD972683090300CE6080 /* NotificationEventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationEventItem.swift; sourceTree = "<group>"; };
+		0BA4FD992683094200CE6080 /* NotificationEventItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationEventItemTest.swift; sourceTree = "<group>"; };
+		0BA4FD9B26830B3800CE6080 /* OpenNotificationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotificationEvent.swift; sourceTree = "<group>"; };
+		0BA4FD9D26830C6600CE6080 /* OpenNotificationEventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotificationEventTest.swift; sourceTree = "<group>"; };
 		0BBFAB6A266FBFCD004C4C28 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		0BBFAB6C266FC070004C4C28 /* ClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMock.swift; sourceTree = "<group>"; };
 		0BBFAB6F266FC0D0004C4C28 /* ClientSendEventParams+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClientSendEventParams+Equatable.swift"; sourceTree = "<group>"; };
@@ -229,6 +237,7 @@
 				0B8BD2CC26723629002F6171 /* ReviewEvent.swift */,
 				0BEC9F28267897D70074380F /* ClickRecomItemEvent.swift */,
 				0BEC9F2C267899A00074380F /* ImprRecomItemsEvent.swift */,
+				0BA4FD9B26830B3800CE6080 /* OpenNotificationEvent.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				0B8BD2CE2672365D002F6171 /* ReviewEventTest.swift */,
 				0BEC9F2A2678987D0074380F /* ClickRecomItemEventTest.swift */,
 				0BEC9F2E267899F30074380F /* ImprRecomItemsEventTest.swift */,
+				0BA4FD9D26830C6600CE6080 /* OpenNotificationEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -292,6 +302,7 @@
 				0B8BD2BF26721D80002F6171 /* PurchaseEventItem.swift */,
 				0B8BD2C8267235A6002F6171 /* ReviewEventItem.swift */,
 				0BEC9F242678964A0074380F /* RecomItemEventItem.swift */,
+				0BA4FD972683090300CE6080 /* NotificationEventItem.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 				0B8BD2C126721E0C002F6171 /* PurchaseEventItemTest.swift */,
 				0B8BD2CA267235E8002F6171 /* ReviewEventItemTest.swift */,
 				0BEC9F26267897620074380F /* RecomItemEventItem.swift */,
+				0BA4FD992683094200CE6080 /* NotificationEventItemTest.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -539,6 +551,7 @@
 				0B8BD27526709A5E002F6171 /* Event.swift in Sources */,
 				0B79C7232660D36F0086C1D4 /* AwareClient.swift in Sources */,
 				0B8BD2D126731125002F6171 /* PromotionEvent.swift in Sources */,
+				0BA4FD9C26830B3800CE6080 /* OpenNotificationEvent.swift in Sources */,
 				0BF09DDB2653A7D200C25048 /* Device.swift in Sources */,
 				0B79C7272660F18E0086C1D4 /* ClientError.swift in Sources */,
 				0B8BD2A72672139B002F6171 /* CartEventItem.swift in Sources */,
@@ -548,6 +561,7 @@
 				0BBFAB74266FC718004C4C28 /* OSLog+aware.swift in Sources */,
 				0B8BD2CD26723629002F6171 /* ReviewEvent.swift in Sources */,
 				0B8BD2B1267218C7002F6171 /* RemoveFromCartEvent.swift in Sources */,
+				0BA4FD982683090300CE6080 /* NotificationEventItem.swift in Sources */,
 				0B79C7222660D1DE0086C1D4 /* Date+timestamp.swift in Sources */,
 				0B8BD29F267207E6002F6171 /* LikeEventItem.swift in Sources */,
 				0B8BD2832670B993002F6171 /* SearchEvent.swift in Sources */,
@@ -585,6 +599,7 @@
 				0B8BD271267092B3002F6171 /* ClientErrorTest.swift in Sources */,
 				0B8BD2852670BAA8002F6171 /* SearchEventTest.swift in Sources */,
 				0B8BD2972671FCE9002F6171 /* Fixtures.swift in Sources */,
+				0BA4FD9A2683094200CE6080 /* NotificationEventItemTest.swift in Sources */,
 				0B8BD2C7267234F9002F6171 /* PurchaseEventTest.swift in Sources */,
 				0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */,
 				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
@@ -597,6 +612,7 @@
 				0B862B042666097A005E242D /* ClientError+Equatable.swift in Sources */,
 				0B8BD2AD26721518002F6171 /* AddToCartEventTest.swift in Sources */,
 				0B8BD2CB267235E8002F6171 /* ReviewEventItemTest.swift in Sources */,
+				0BA4FD9E26830C6600CE6080 /* OpenNotificationEventTest.swift in Sources */,
 				0BEC9F2F267899F30074380F /* ImprRecomItemsEventTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
