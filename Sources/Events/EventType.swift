@@ -16,4 +16,5 @@ enum EventType: String {
   case clickRecomItem = "click recom item"
   case imprRecomItems = "impr recom items"
   case openNotification = "open notification"
+  case notificationReceived = "notification received"
 }
