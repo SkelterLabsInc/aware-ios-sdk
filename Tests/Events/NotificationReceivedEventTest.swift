@@ -19,7 +19,6 @@ class NotificationReceivedEventTest: XCTestCase {
         "type": "notification received",
         "timestamp": DATE.timestamp,
         "device": DEVICE,
-        "item": nil,
       ]
     )
   }

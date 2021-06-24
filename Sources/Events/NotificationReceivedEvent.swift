@@ -22,9 +22,10 @@ public class NotificationReceivedEvent: Event {
   }
 
   override func makeEventSpecificCustomField() -> CustomField {
-    var field: [String: AnyHashable] = [
-      "item": item?.toItemField(),
-    ]
+    var field: [String: AnyHashable] = [:]
+    if let item = item {
+      field["item"] = item.toItemField()
+    }
     if let text = text {
       field["text"] = text
     }

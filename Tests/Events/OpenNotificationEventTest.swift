@@ -19,7 +19,6 @@ class OpenNotificationEventTest: XCTestCase {
         "type": "open notification",
         "timestamp": DATE.timestamp,
         "device": DEVICE,
-        "item": nil,
       ]
     )
   }
