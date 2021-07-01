@@ -8,6 +8,7 @@ class AwareSDKTest: XCTestCase {
   let IDENTIFIER = UUID()
   let USER_ID = "test-user-id"
   let IDFA = UUID().uuidString
+  let INVALID_IDFA = "00000000-0000-0000-0000-000000000000"
   let DATE = Date()
   lazy var EVENT = JoinEvent(date: DATE)
   lazy var PARAMS = ClientSendEventParams(
@@ -67,6 +68,12 @@ class AwareSDKTest: XCTestCase {
     uut.setIdfa(idfa: IDFA)
 
     XCTAssertEqual(uut.idfa, IDFA)
+  }
+
+  func test_whenSettingIdfaAndIdfaIsInvalid_thenSDKIdfaIsUnset() {
+    uut.setIdfa(idfa: INVALID_IDFA)
+
+    XCTAssertEqual(uut.idfa, nil)
   }
 
   func test_whenUnsettingIdfa_thenSDKIdfaIsUnset() {

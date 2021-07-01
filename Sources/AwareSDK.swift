@@ -3,6 +3,8 @@ import os.log
 import UIKit
 
 public class AwareSDK {
+  private static let IDFA_VALUE_FOR_NONE = "00000000-0000-0000-0000-000000000000"
+
   let serialQueue = DispatchQueue(label: "AwareSDK:SerialQueue")
   let client: Client
   let currentDevice: Device
@@ -38,6 +40,9 @@ public class AwareSDK {
   }
 
   func setIdfa(idfa: String) {
+    if !isValidIdfa(idfa: idfa) {
+      return
+    }
     serialQueue.sync { [weak self] in
       self?.idfa = idfa
     }
@@ -104,6 +109,10 @@ public class AwareSDK {
           error.message
         )
     }
+  }
+
+  private func isValidIdfa(idfa: String) -> Bool {
+    idfa != AwareSDK.IDFA_VALUE_FOR_NONE
   }
 }
 
