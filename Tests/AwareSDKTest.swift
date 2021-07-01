@@ -16,6 +16,12 @@ class AwareSDKTest: XCTestCase {
     userId: USER_ID,
     field: EVENT.toCustomField()
   )
+  lazy var PARAMS_WITH_IFDA = ClientSendEventParams(
+    projectId: PROJECT_ID,
+    iid: IDENTIFIER.uuidString,
+    userId: USER_ID,
+    field: EVENT.toCustomField(idfa: IDFA)
+  )
 
   var client: ClientMock!
   var device: MockDevice!
@@ -88,6 +94,21 @@ class AwareSDKTest: XCTestCase {
     uut.configure(projectId: PROJECT_ID)
     uut.setUserId(userId: USER_ID)
     client.sendEventCalled(with: PARAMS, result: .success(())) {
+      expectation.fulfill()
+    }
+
+    uut.track(event: EVENT)
+
+    wait(for: [expectation], timeout: 10.0)
+    expectSendEventCalledOnce()
+  }
+
+  func test_whenIdfaIsSetAndClientResolvesSuccess_thenSendEventSucceed() {
+    let expectation = XCTestExpectation()
+    uut.configure(projectId: PROJECT_ID)
+    uut.setUserId(userId: USER_ID)
+    uut.setIdfa(idfa: IDFA)
+    client.sendEventCalled(with: PARAMS_WITH_IFDA, result: .success(())) {
       expectation.fulfill()
     }
 

@@ -72,7 +72,7 @@ public class AwareSDK {
         projectId: projectId,
         iid: iid,
         userId: self.userId,
-        field: event.toCustomField()
+        field: event.toCustomField(idfa: self.idfa)
       )
       self.client.sendEvent(params: params) { [weak self] result in
         guard let self = self else { return }

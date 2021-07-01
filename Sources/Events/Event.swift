@@ -11,15 +11,19 @@ public class Event {
     timestamp = date.timestamp
   }
 
-  final func toCustomField() -> CustomField {
+  final func toCustomField(idfa: String? = nil) -> CustomField {
+    var device: CustomField = [
+      "platform": "mobile",
+      "os": "iOS",
+      "manufacturer": "Apple",
+    ]
+    if let idfa = idfa {
+      device["idfa"] = idfa
+    }
     let defaultCustomField: CustomField = [
       "type": type.rawValue,
       "timestamp": timestamp,
-      "device": [
-        "platform": "mobile",
-        "os": "iOS",
-        "manufacturer": "Apple",
-      ],
+      "device": device,
     ]
     let customField = mergeCustomFields(defaultCustomField, makeEventSpecificCustomField())
     return customField
