@@ -7,6 +7,7 @@ class AwareSDKTest: XCTestCase {
   let PROJECT_ID = "test-project-id"
   let IDENTIFIER = UUID()
   let USER_ID = "test-user-id"
+  let IDFA = UUID().uuidString
   let DATE = Date()
   lazy var EVENT = JoinEvent(date: DATE)
   lazy var PARAMS = ClientSendEventParams(
@@ -54,6 +55,20 @@ class AwareSDKTest: XCTestCase {
     uut.unsetUser()
 
     XCTAssertEqual(uut.userId, nil)
+  }
+
+  func test_whenSettingIdfa_thenSDKIdfaSetByTheIdfa() {
+    uut.setIdfa(idfa: IDFA)
+
+    XCTAssertEqual(uut.idfa, IDFA)
+  }
+
+  func test_whenUnsettingIdfa_thenSDKIdfaIsUnset() {
+    uut.setIdfa(idfa: IDFA)
+
+    uut.unsetIdfa()
+
+    XCTAssertEqual(uut.idfa, nil)
   }
 
   func test_whenSettingDebugTrue_thenSDKDebugIsSetByTrue() {

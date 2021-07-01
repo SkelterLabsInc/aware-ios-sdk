@@ -10,6 +10,7 @@ public class AwareSDK {
   var projectId: String?
   var iid: String?
   var userId: String?
+  var idfa: String?
   var debug: Bool = false
 
   init(client: Client = AwareClient(), currentDevice: Device = UIDevice.current) {
@@ -33,6 +34,18 @@ public class AwareSDK {
   func unsetUser() {
     serialQueue.sync { [weak self] in
       self?.userId = nil
+    }
+  }
+
+  func setIdfa(idfa: String) {
+    serialQueue.sync { [weak self] in
+      self?.idfa = idfa
+    }
+  }
+
+  func unsetIdfa() {
+    serialQueue.sync { [weak self] in
+      self?.idfa = nil
     }
   }
 
@@ -109,6 +122,14 @@ public extension AwareSDK {
 
   static func unsetUser() {
     sharedInstance.unsetUser()
+  }
+
+  static func setIdfa(idfa: String) {
+    sharedInstance.setIdfa(idfa: idfa)
+  }
+
+  static func unsetIdfa() {
+    sharedInstance.unsetIdfa()
   }
 
   static func setDebug(debug: Bool) {
