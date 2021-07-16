@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AwareSDK'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.summary = 'AIQ Aware iOS SDK'
   s.homepage = 'https://github.com/SkelterLabsInc/aware-ios-sdk'
