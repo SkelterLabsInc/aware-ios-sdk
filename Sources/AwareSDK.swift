@@ -3,7 +3,7 @@ import os.log
 import UIKit
 
 public class AwareSDK {
-  static let userIdNeededTypes: [EventType] = [.join, .login, .logout, .like]
+  private static let IDFA_VALUE_FOR_NONE = "00000000-0000-0000-0000-000000000000"
 
   let serialQueue = DispatchQueue(label: "AwareSDK:SerialQueue")
   let client: Client
@@ -12,6 +12,7 @@ public class AwareSDK {
   var projectId: String?
   var iid: String?
   var userId: String?
+  var idfa: String?
   var debug: Bool = false
 
   init(client: Client = AwareClient(), currentDevice: Device = UIDevice.current) {
@@ -38,6 +39,21 @@ public class AwareSDK {
     }
   }
 
+  func setIdfa(idfa: String) {
+    if !isValidIdfa(idfa: idfa) {
+      return
+    }
+    serialQueue.sync { [weak self] in
+      self?.idfa = idfa
+    }
+  }
+
+  func unsetIdfa() {
+    serialQueue.sync { [weak self] in
+      self?.idfa = nil
+    }
+  }
+
   func setDebug(debug: Bool) {
     serialQueue.sync { [weak self] in
       self?.debug = debug
@@ -57,21 +73,11 @@ public class AwareSDK {
         return
       }
 
-      if self.userId == nil && AwareSDK.userIdNeededTypes.contains(event.type) {
-        if self.debug {
-          self.logMessage(
-            message: "track %@ event failed. set user ID before tracking.",
-            event.type.rawValue
-          )
-        }
-        return
-      }
-
       let params = ClientSendEventParams(
         projectId: projectId,
         iid: iid,
         userId: self.userId,
-        field: event.toCustomField()
+        field: event.toCustomField(idfa: self.idfa)
       )
       self.client.sendEvent(params: params) { [weak self] result in
         guard let self = self else { return }
@@ -104,6 +110,10 @@ public class AwareSDK {
         )
     }
   }
+
+  private func isValidIdfa(idfa: String) -> Bool {
+    idfa != AwareSDK.IDFA_VALUE_FOR_NONE
+  }
 }
 
 // MARK: - Singleton support for AwareSDK
@@ -121,6 +131,14 @@ public extension AwareSDK {
 
   static func unsetUser() {
     sharedInstance.unsetUser()
+  }
+
+  static func setIdfa(idfa: String) {
+    sharedInstance.setIdfa(idfa: idfa)
+  }
+
+  static func unsetIdfa() {
+    sharedInstance.unsetIdfa()
   }
 
   static func setDebug(debug: Bool) {
