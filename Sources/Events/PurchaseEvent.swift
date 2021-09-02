@@ -15,6 +15,6 @@ public class PurchaseEvent: Event {
   }
 
   override func makeEventSpecificCustomField() -> CustomField {
-    ["items": items.map { item in item.toItemField() }]
+    ["items": items.map { item in item.toItemField() }, "price": price]
   }
 }
