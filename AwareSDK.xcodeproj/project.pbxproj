@@ -73,6 +73,8 @@
 		0BBFAB6E266FC08C004C4C28 /* ClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB6C266FC070004C4C28 /* ClientMock.swift */; };
 		0BBFAB71266FC0EC004C4C28 /* ClientSendEventParams+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB6F266FC0D0004C4C28 /* ClientSendEventParams+Equatable.swift */; };
 		0BBFAB74266FC718004C4C28 /* OSLog+aware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFAB73266FC718004C4C28 /* OSLog+aware.swift */; };
+		0BCB994D27267A2B0080B9F0 /* CustomFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB994C27267A2B0080B9F0 /* CustomFields.swift */; };
+		0BCB994F27267D5B0080B9F0 /* CustomFieldsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB994E27267D5B0080B9F0 /* CustomFieldsTest.swift */; };
 		0BCE0E21265F9AD2005DB0EC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0BCE0E20265F9AD2005DB0EC /* Alamofire */; };
 		0BEC9F252678964A0074380F /* RecomItemEventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC9F242678964A0074380F /* RecomItemEventItem.swift */; };
 		0BEC9F27267897620074380F /* RecomItemEventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC9F26267897620074380F /* RecomItemEventItem.swift */; };
@@ -160,6 +162,8 @@
 		0BBFAB6C266FC070004C4C28 /* ClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMock.swift; sourceTree = "<group>"; };
 		0BBFAB6F266FC0D0004C4C28 /* ClientSendEventParams+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClientSendEventParams+Equatable.swift"; sourceTree = "<group>"; };
 		0BBFAB73266FC718004C4C28 /* OSLog+aware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+aware.swift"; sourceTree = "<group>"; };
+		0BCB994C27267A2B0080B9F0 /* CustomFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFields.swift; sourceTree = "<group>"; };
+		0BCB994E27267D5B0080B9F0 /* CustomFieldsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldsTest.swift; sourceTree = "<group>"; };
 		0BEC9F242678964A0074380F /* RecomItemEventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomItemEventItem.swift; sourceTree = "<group>"; };
 		0BEC9F26267897620074380F /* RecomItemEventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomItemEventItem.swift; sourceTree = "<group>"; };
 		0BEC9F28267897D70074380F /* ClickRecomItemEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickRecomItemEvent.swift; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				0B8BD2C8267235A6002F6171 /* ReviewEventItem.swift */,
 				0BEC9F242678964A0074380F /* RecomItemEventItem.swift */,
 				0BA4FD972683090300CE6080 /* NotificationEventItem.swift */,
+				0BCB994C27267A2B0080B9F0 /* CustomFields.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				0B8BD2CA267235E8002F6171 /* ReviewEventItemTest.swift */,
 				0BEC9F26267897620074380F /* RecomItemEventItem.swift */,
 				0BA4FD992683094200CE6080 /* NotificationEventItemTest.swift */,
+				0BCB994E27267D5B0080B9F0 /* CustomFieldsTest.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				0BA4FDA026830F0100CE6080 /* NotificationReceivedEvent.swift in Sources */,
 				0B8BD28E2670BFD7002F6171 /* ItemEvent.swift in Sources */,
 				0B8BD29D267207CD002F6171 /* LikeEvent.swift in Sources */,
+				0BCB994D27267A2B0080B9F0 /* CustomFields.swift in Sources */,
 				0B8BD2812670B945002F6171 /* LogoutEvent.swift in Sources */,
 				0B8BD2772670A58F002F6171 /* JoinEvent.swift in Sources */,
 				0B8BD2B726721C0B002F6171 /* CartEvent.swift in Sources */,
@@ -610,6 +617,7 @@
 				0BA4FD9A2683094200CE6080 /* NotificationEventItemTest.swift in Sources */,
 				0B8BD2C7267234F9002F6171 /* PurchaseEventTest.swift in Sources */,
 				0B79C716266095D10086C1D4 /* AwareClientTest.swift in Sources */,
+				0BCB994F27267D5B0080B9F0 /* CustomFieldsTest.swift in Sources */,
 				0B0DBEB8266641EF00C0BA01 /* ClientSendEventParamsTest.swift in Sources */,
 				0B8BD2A12672096C002F6171 /* LikeEventItemTest.swift in Sources */,
 				0B8BD2792670A5F0002F6171 /* JoinEventTest.swift in Sources */,

@@ -7,6 +7,7 @@ public struct RecomItemEventItem {
   let categoryName: String?
   let brandName: String?
   let imageUrl: String?
+  let customFields: CustomFields?
 
   public init(
     id: String,
@@ -14,7 +15,8 @@ public struct RecomItemEventItem {
     price: Int? = nil,
     categoryName: String? = nil,
     brandName: String? = nil,
-    imageUrl: String? = nil
+    imageUrl: String? = nil,
+    customFields: CustomFields? = nil
   ) {
     self.id = id
     self.title = title
@@ -22,6 +24,7 @@ public struct RecomItemEventItem {
     self.categoryName = categoryName
     self.brandName = brandName
     self.imageUrl = imageUrl
+    self.customFields = customFields
   }
 
   func toItemField() -> [String: AnyHashable] {
@@ -42,6 +45,9 @@ public struct RecomItemEventItem {
     }
     if let imageUrl = imageUrl {
       field["image_url"] = imageUrl
+    }
+    if let customFields = customFields {
+      field.merge(customFields.toItemField()) { current, _ in current }
     }
     return field
   }

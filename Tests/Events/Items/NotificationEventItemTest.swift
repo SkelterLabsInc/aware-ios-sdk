@@ -3,6 +3,8 @@ import XCTest
 
 class NotificationEventItemTest: XCTestCase {
   let ID = "test-id"
+  let CUSTOM_STRING1 = "str1"
+  let CUSTOM_INT1 = 1
 
   var uut: NotificationEventItem!
 
@@ -12,5 +14,20 @@ class NotificationEventItemTest: XCTestCase {
     let result = uut.toItemField()
 
     XCTAssertEqual(result, ["id": ID])
+  }
+
+  func test_whenToItemFieldMethodIsCalledWithCustomFields_returnItemField() {
+    uut = NotificationEventItem(
+      id: ID,
+      customFields: CustomFields(string1: CUSTOM_STRING1, int1: CUSTOM_INT1)
+    )
+
+    let result = uut.toItemField()
+
+    XCTAssertEqual(result, [
+      "id": ID,
+      "custom_str_1": CUSTOM_STRING1,
+      "custom_int_1": CUSTOM_INT1,
+    ])
   }
 }

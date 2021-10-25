@@ -9,6 +9,7 @@ public struct ItemEventItem {
   let brandName: String
   let imageUrl: String
   let outOfStock: Bool
+  let customFields: CustomFields?
 
   public init(
     id: String,
@@ -18,7 +19,8 @@ public struct ItemEventItem {
     categoryName: String,
     brandName: String,
     imageUrl: String,
-    outOfStock: Bool
+    outOfStock: Bool,
+    customFields: CustomFields? = nil
   ) {
     self.id = id
     self.title = title
@@ -28,10 +30,11 @@ public struct ItemEventItem {
     self.brandName = brandName
     self.imageUrl = imageUrl
     self.outOfStock = outOfStock
+    self.customFields = customFields
   }
 
   func toItemField() -> [String: AnyHashable] {
-    [
+    var field: [String: AnyHashable] = [
       "id": id,
       "title": title,
       "original_price": originalPrice,
@@ -41,5 +44,9 @@ public struct ItemEventItem {
       "image_url": imageUrl,
       "out_of_stock": String(outOfStock),
     ]
+    if let customFields = customFields {
+      field.merge(customFields.toItemField()) { current, _ in current }
+    }
+    return field
   }
 }
