@@ -4,7 +4,7 @@ import XCTest
 class PurchaseEventTest: XCTestCase {
   let ITEM1 = PurchaseEventItem(id: "test-id-1", quantity: 1, payment: 100)
   let ITEM2 = PurchaseEventItem(id: "test-id-2", quantity: 2, payment: 1000)
-  let PRICE = 10000
+  let PRICE = 1100
   let DATE = Date()
 
   var uut: PurchaseEvent!
