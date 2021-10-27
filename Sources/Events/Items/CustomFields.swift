@@ -26,7 +26,7 @@ public struct CustomFields {
   let float3: Float?
   let float4: Float?
 
-  init(
+  public init(
     string1: String? = nil,
     string2: String? = nil,
     string3: String? = nil,
