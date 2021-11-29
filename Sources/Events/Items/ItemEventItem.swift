@@ -6,6 +6,7 @@ public struct ItemEventItem {
   let originalPrice: Int
   let price: Int
   let categoryName: String
+  let description: String?
   let brandName: String
   let imageUrl: String
   let outOfStock: Bool
@@ -17,6 +18,7 @@ public struct ItemEventItem {
     originalPrice: Int,
     price: Int,
     categoryName: String,
+    description: String? = nil,
     brandName: String,
     imageUrl: String,
     outOfStock: Bool,
@@ -27,6 +29,7 @@ public struct ItemEventItem {
     self.originalPrice = originalPrice
     self.price = price
     self.categoryName = categoryName
+    self.description = description
     self.brandName = brandName
     self.imageUrl = imageUrl
     self.outOfStock = outOfStock
@@ -44,6 +47,9 @@ public struct ItemEventItem {
       "image_url": imageUrl,
       "out_of_stock": String(outOfStock),
     ]
+    if let description = description {
+      field["description"] = description
+    }
     if let customFields = customFields {
       field.merge(customFields.toItemField()) { current, _ in current }
     }

@@ -7,6 +7,7 @@ class ItemEventItemTest: XCTestCase {
   let ORIGINAL_PRICE = 10000
   let PRICE = 10000
   let CATEGORY_NAME = "test-category-name"
+  let DESCRIPTION = "test-description"
   let BRAND_NAME = "test-brand-name"
   let IMAGE_URL = "test-image-url"
   let OUT_OF_STOCK = false
@@ -41,6 +42,34 @@ class ItemEventItemTest: XCTestCase {
     ])
   }
 
+  func test_whenToItemFieldMethodIsCalledWithOptionalFields_returnItemField() {
+    uut = ItemEventItem(
+      id: ID,
+      title: TITLE,
+      originalPrice: ORIGINAL_PRICE,
+      price: PRICE,
+      categoryName: CATEGORY_NAME,
+      description: DESCRIPTION,
+      brandName: BRAND_NAME,
+      imageUrl: IMAGE_URL,
+      outOfStock: OUT_OF_STOCK
+    )
+
+    let result = uut.toItemField()
+
+    XCTAssertEqual(result, [
+      "id": ID,
+      "title": TITLE,
+      "original_price": ORIGINAL_PRICE,
+      "price": PRICE,
+      "category_name": CATEGORY_NAME,
+      "description": DESCRIPTION,
+      "brand_name": BRAND_NAME,
+      "image_url": IMAGE_URL,
+      "out_of_stock": "false",
+    ])
+  }
+
   func test_whenToItemFieldMethodIsCalledWithCustomFields_returnItemField() {
     uut = ItemEventItem(
       id: ID,
@@ -48,6 +77,7 @@ class ItemEventItemTest: XCTestCase {
       originalPrice: ORIGINAL_PRICE,
       price: PRICE,
       categoryName: CATEGORY_NAME,
+      description: DESCRIPTION,
       brandName: BRAND_NAME,
       imageUrl: IMAGE_URL,
       outOfStock: OUT_OF_STOCK,
@@ -62,6 +92,7 @@ class ItemEventItemTest: XCTestCase {
       "original_price": ORIGINAL_PRICE,
       "price": PRICE,
       "category_name": CATEGORY_NAME,
+      "description": DESCRIPTION,
       "brand_name": BRAND_NAME,
       "image_url": IMAGE_URL,
       "out_of_stock": "false",
